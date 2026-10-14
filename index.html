@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Marc Frederick Siazon, a full-stack web developer who uses AI to work faster and better.">
+  <title>Marc.exe</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand">Marc.exe</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#home">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode">Dark mode</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <canvas class="matrix-canvas" id="matrixCanvas" aria-hidden="true"></canvas>
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hello">Hi, I'm Marc Frederick Siazon.</p>
+          <h1>A full-stack web developer who builds with AI as a teammate.</h1>
+          <p class="lead">
+            I design and build web systems from the database to the screen. I use AI tools
+            every day to plan, write, debug, and test faster, so I can spend more time on the
+            parts that need human judgment.
+          </p>
+          <p>
+            Most of my work centers on a cooperative management system and its companion mobile app.
+            I care about clean structure, readable code, and software that members and
+            administrators can use without a manual.
+          </p>
+          <ul class="skill-tags" aria-label="Skills">
+            <li>HTML / CSS / JavaScript</li>
+            <li>PHP &amp; MySQL</li>
+            <li>Firebase</li>
+            <li>Flutter</li>
+            <li>AI-assisted development</li>
+          </ul>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">See my work</a>
+            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+
+        <figure class="hero-photo">
+          <img src="images/profile.jpg" alt="Portrait of Marc Frederick Siazon smiling, wearing a black suit and tie" width="520" height="520">
+        </figure>
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <p class="section-intro">Two connected parts of one system: a website for administrators and a mobile app for members.</p>
+
+        <div class="project-grid">
+
+          <article class="project-card">
+            <div class="project-head">
+              <h3>Lupon Cooperative Website</h3>
+              <span class="status">Live web system</span>
+            </div>
+            <p>
+              A web system for managing a cooperative, with member accounts, a dashboard, and
+              surveys for members to answer. It started on PHP and MySQL and is being migrated
+              to Firebase so that the website and the mobile app share one database.
+            </p>
+            <ul class="project-tags" aria-label="Technologies used">
+              <li>PHP</li>
+              <li>MySQL</li>
+              <li>Firebase</li>
+              <li>Firestore</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-head">
+              <h3>Lupon Mobile App</h3>
+              <span class="status status-build">In development</span>
+            </div>
+            <p>
+              The member side of Lupon on a phone. Members sign in, see the same dashboard as on
+              the web, open available surveys, and answer them. Completed surveys are marked as
+              taken.
+            </p>
+            <ul class="project-tags" aria-label="Technologies used">
+              <li>Flutter</li>
+              <li>Firebase Auth</li>
+              <li>Firestore</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container footer-inner">
+
+      <div class="footer-copy">
+        <h2>Let's work together</h2>
+        <p>Have a project, a question, or an opportunity? Send me a message or reach me through the links below.</p>
+        <ul class="contact-list">
+          <li><a href="mailto:siazon.marc@gmail.com">siazon.marc@gmail.com</a></li>
+          <li><a href="https://github.com/PoGMarc" target="_blank" rel="noopener">github.com/PoGMarc</a></li>
+          <li><a href="https://www.facebook.com/marc1120" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name" aria-describedby="nameError">
+          <p class="error" id="nameError"></p>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" aria-describedby="emailError">
+          <p class="error" id="emailError"></p>
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" aria-describedby="messageError"></textarea>
+          <p class="error" id="messageError"></p>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Send message</button>
+        <p class="form-status" id="formStatus" role="status"></p>
+      </form>
+
+    </div>
+    <p class="copyright container">&copy; 2026 Marc Frederick Siazon</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
